@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/apsbundela/fem-tip-calculator)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/apsbundela/fem-tip-calculator)
+- Live Site URL: (https://apsbundela.github.io/fem-tip-calculator/)
 
 ## My process
 
