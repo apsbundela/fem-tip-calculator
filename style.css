@@ -1,0 +1,207 @@
+:root {
+    --clr-green-400: hsl(172, 67%, 45%);
+    --clr-grey-500: hsl(186, 14%, 43%);
+    --clr-green-900: hsl(183, 100%, 15%);
+    --clr-grey-400: hsl(184, 14%, 56%);
+    --clr-grey-200: hsl(185, 41%, 84%);
+    --clr-grey-50: hsl(189, 47%, 97%);
+    --clr-white: hsl(0, 100%, 100%);
+    --border-radius: 0.35rem;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+    background-color: var(--clr-grey-200);
+    font-size: 24px;
+    font-family: "Space Mono", monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title {
+    margin: 0 auto;
+    width: min-content;
+    font-size: 1.75rem;
+    color: var(--clr-grey-500);
+    letter-spacing: 0.5rem;
+}
+
+.calculator-wrapper {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--clr-white);
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.51px;
+    color: var(--clr-grey-500);
+}
+
+input {
+    background-color: var(--clr-grey-50);
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 100%;
+    padding:  0.35rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-green-900);
+    border-style: none;
+    outline: none;
+}
+
+input:focus,
+input:focus-visible {
+    outline: 1px solid var(--clr-green-400);
+}
+
+input::placeholder {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: right;
+    color: var(--clr-green-900);
+}
+
+
+.calculation-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tip-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+#custom-tip::placeholder {
+    font-size: 1rem;
+}
+
+button[type="button"] {
+    padding: 0.55rem 2rem;
+    outline: none;
+    border-style: none;
+    border-radius: var(--border-radius);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    background-color: var(--clr-green-900);
+    cursor: pointer;
+}
+
+button[type="button"]:focus-visible {
+    background-color: var(--clr-green-400);
+}
+
+.total-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 2rem 1.5rem;
+    background-color: var(--clr-green-900);
+    border-radius: 0.55rem;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-main {
+    color: var(--clr-grey-50);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.tota-pp {
+    font-size: 0.725rem;
+    font-weight: 700;
+    color: var(--clr-grey-400);
+}
+
+.tip-total {
+    color: var(--clr-green-400);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.reset-btn {
+    outline: none;
+    border-style: none;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-green-400);
+    color: var(--clr-green-900);
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.disable-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.active {
+    background-color: var(--clr-green-400) !important;
+}
+
+@media(min-width: 1024px) {
+    .calculator-wrapper {
+        width: 100%;
+        padding: 2rem;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+        max-width: 900px;
+    }
+
+    .calculation-fields {
+        align-self: flex-end;
+    }
+
+    .tip-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .total-fields {
+        min-width: 50%;
+    }
+
+    .reset-btn {
+        margin-top: auto;
+    }
+}
